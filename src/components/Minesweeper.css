@@ -1,0 +1,94 @@
+.minesweeper {
+    display: flex;
+    position: relative;
+    width: 170px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cells {
+    margin: 3px;
+}
+
+.playArea {
+    width: 166px;
+    height: 166px;
+    position: relative;
+}
+
+.outerBorder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.border {
+    background-color: #c0c0c0;
+    margin: auto 0 3px;
+    position: relative;
+}
+
+.innerBorder {
+    margin: 5px;
+    display: flex;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.outerHighlight {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.outerShadow {
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+    background-color: #808080;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.innerHighlight {
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.innerShadow {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    background-color: #808080;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+}
+
+
+
+.cell {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    z-index: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #c0c0c0;
+}
