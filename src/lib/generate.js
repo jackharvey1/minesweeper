@@ -1,7 +1,7 @@
 const gridSize = 9;
 const mineCount = 10;
 
-export default () => {
+const generate = () => {
     const grid = [];
 
     for (let i = 0; i < gridSize; i++) {
@@ -19,4 +19,6 @@ export default () => {
     }
 
     return grid;
-}
+};
+
+export default generate;
