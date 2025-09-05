@@ -1,30 +1,31 @@
 import './Minesweeper.css';
 import Cell from './Cell';
 
-const Row = ({ children }) => (
-    <div className="row">{children}</div>
-)
+const Row = ({ children, padded }) => (
+    <div className={`row ${padded ? ' padded' : ''}`}>{children}</div>
+);
 
 export default () => (
-    <div className="minesweeper">
-        <div className="playArea">
-            <div className="outerBorder">
-                <div className="outerHighlight" />
-                <div className="outerShadow" />
-                <div className="border">
-                    <div className="innerBorder">
-                        <div className="innerHighlight" />
-                        <div className="innerShadow" />
-                        <div className="cells">
-                            {Array(9).fill().map((_, i) => 
-                                <Row>
-                                    {Array(9).fill().map((_, j) => 
-                                        <Cell key={`${i}-${j}`}/>
-                                    )}
-                                </Row>
+    <div className='minesweeper'>
+        <div className='playArea'>
+            <div className='border outsetBorder scoreboard'>
+                <div className='container insetBorder'>
+                    <Row padded={true}>
+                        <div className='numbers insetBorder' />
+                        <div className='smiley outsetBorder' />
+                        <div className='numbers insetBorder' />
+                    </Row>
+                </div>
+            </div>
+            <div className='border outsetBorder'>
+                <div className='container insetBorder'>
+                    {Array(9).fill().map((_, i) => 
+                        <Row>
+                            {Array(9).fill().map((_, j) => 
+                                <Cell key={`${i}-${j}`}/>
                             )}
-                        </div>
-                    </div>
+                        </Row>
+                    )}
                 </div>
             </div>
         </div>

@@ -7,32 +7,22 @@
     align-items: center;
 }
 
-.cells {
-    margin: 3px;
-}
-
 .playArea {
-    width: 166px;
-    height: 166px;
     position: relative;
 }
 
-.outerBorder {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+.cell {
+    width: 12px;
+    height: 12px;
+    background-color: #c0c0c0;
+}
+
+.container {
+    margin: 5px;
 }
 
 .border {
     background-color: #c0c0c0;
-    margin: auto 0 3px;
-    position: relative;
-}
-
-.innerBorder {
-    margin: 5px;
-    display: flex;
-    position: relative;
 }
 
 .row {
@@ -40,55 +30,50 @@
     flex-direction: row;
 }
 
-.outerHighlight {
-    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+.outsetBorder {
+    border: outset 3px;
+    border-top-color: white;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    border-left-color: white;
 }
 
-.outerShadow {
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
-    background-color: #808080;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.innerHighlight {
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.innerShadow {
-    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-    background-color: #808080;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.container {
-    position: relative;
-    display: flex;
+.padded {
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    height: 16px;
-    width: 16px;
+    padding: 4px;
 }
 
+.insetBorder {
+    border: inset 3px;
+    border-top-color: #808080;
+    border-right-color: white;
+    border-bottom-color: white;
+    border-left-color: 808080;
+}
 
+.numbers {
+    width: 37px;
+    height: 26px;
+    background-color: black;
+}
 
-.cell {
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    z-index: 0;
-    width: 12px;
-    height: 12px;
-    background-color: #c0c0c0;
+.smiley {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../public/smiley.png');
+    image-rendering: crisp-edges;
+}
+
+.scoreboardContainer {
+    margin-bottom: -3px;
+    border-bottom-width: 0px;
+    z-index: 1;
+}
+
+.scoreboard {
+    margin-bottom: -8px;
+    border-bottom-width: 0px;
+    z-index: 1;
+    position: relative;
 }

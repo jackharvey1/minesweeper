@@ -1,9 +1,7 @@
 import './Minesweeper.css';
 
-export default () => (
-    <div className="container">
-        <div className="outerShadow"/>
-        <div className="outerHighlight"/>
-        <div className="cell" />
-    </div>
-)
+const Cell = () => (
+    <div className="cell outsetBorder" />
+);
+
+export default Cell;
