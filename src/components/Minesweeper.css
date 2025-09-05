@@ -53,9 +53,14 @@
 }
 
 .numbers {
-    width: 37px;
-    height: 26px;
+    width: 44px;
+    height: 25px;
     background-color: black;
+    display: flex;
+
+    & > div {
+        padding-left: 1px;
+    }
 }
 
 .smiley {

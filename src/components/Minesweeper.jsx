@@ -1,19 +1,28 @@
 import './Minesweeper.css';
 import Cell from './Cell';
+import SevenSegmentDisplay from './SevenSegmentDisplay';
 
 const Row = ({ children, padded }) => (
     <div className={`row ${padded ? ' padded' : ''}`}>{children}</div>
 );
 
-export default () => (
+const Minesweeper = () => (
     <div className='minesweeper'>
         <div className='playArea'>
             <div className='border outsetBorder scoreboard'>
                 <div className='container insetBorder'>
                     <Row padded={true}>
-                        <div className='numbers insetBorder' />
+                        <div className='numbers insetBorder'>
+                            <SevenSegmentDisplay />
+                            <SevenSegmentDisplay />
+                            <SevenSegmentDisplay />
+                        </div>
                         <div className='smiley outsetBorder' />
-                        <div className='numbers insetBorder' />
+                        <div className='numbers insetBorder'>
+                            <SevenSegmentDisplay />
+                            <SevenSegmentDisplay />
+                            <SevenSegmentDisplay />
+                        </div>
                     </Row>
                 </div>
             </div>
@@ -31,3 +40,5 @@ export default () => (
         </div>
     </div>
 );
+
+export default Minesweeper;
