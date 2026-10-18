@@ -19,13 +19,13 @@
 }
 
 .segment.outerSegment {
-    background-image: url('../../public/outer-segment.png');
+    background-image: url('../assets/outer-segment.png');
 }
 
 .segment.middleSegment {
     top: 11px;
     right: 0px;
-    background-image: url('../../public/middle-segment.png');
+    background-image: url('../assets/middle-segment.png');
 }
 
 .top {
